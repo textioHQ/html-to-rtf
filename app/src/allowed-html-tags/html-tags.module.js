@@ -37,37 +37,37 @@ module.exports = [
    },
    {
       opening: 'h1',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard\\fs64',
       closing: '/h1',
       closingRtf: '\\sb70\\par}'
    },
    {
       opening: 'h2',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard\\fs48',
       closing: '/h2',
       closingRtf: '\\sb70\\par}'
    },
    {
       opening: 'h3',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pardc',
       closing: '/h3',
       closingRtf: '\\sb70\\par}'
    },
    {
       opening: 'h4',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard\\fs32',
       closing: '/h4',
       closingRtf: '\\sb70\\par}'
    },
    {
       opening: 'h5',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard22',
       closing: '/h5',
       closingRtf: '\\sb70\\par}'
    },
    {
       opening: 'h6',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard23',
       closing: '/h6',
       closingRtf: '\\sb70\\par}'
    },
