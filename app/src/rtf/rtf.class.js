@@ -26,7 +26,7 @@ class Rtf {
     return this.buildRtf();
   }
 
-// regex: starts with alpha char, followed by alpha or numeric, btn angle brackets, may include "/"
+// regex: starts with alpha char, followed by alpha or numeric, btwn angle brackets, may include "/"
   swapHtmlStrangerTags(html, dafaultTag) {
     return html.replace(/<(\/?[a-zA-Z_]+[a-zA-Z0-9_]*)( *[^>]*)?>/gi, (match, tagName, options) => {
       let newTag = !tagName.includes('/') ? `<${ dafaultTag }${ options ? options : '' }>` : `</${ dafaultTag }>`;
