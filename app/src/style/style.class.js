@@ -28,7 +28,7 @@ class Style {
 
     let fictitiousTagWithTruthStyle = "<span style='"+styleValue+"'></span>";
     let listOfRtfReferences = '';
-    
+
     AllowedStyleProperties.getAllowedTags().forEach(value => {
       if($(fictitiousTagWithTruthStyle).css(value.propertyName) != undefined) {
         switch(value.propertyName) {
@@ -41,7 +41,7 @@ class Style {
 
     if(listOfRtfReferences == '')
       return undefined;
-      
+
     return listOfRtfReferences;
   }
 }
