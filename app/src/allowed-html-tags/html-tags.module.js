@@ -37,21 +37,21 @@ module.exports = [
    },
    {
       opening: 'h1',
-      openingRtf: '{\\pard\\f0\\fs36',
+      openingRtf: '{\\pard\\f0\\fs36',  // 18 point font
       closing: '/h1',
       closingRtf: '\\par}'
    },
    {
       opening: 'h2',
-      openingRtf: '{\\pard\\f0\\fs28',
+      openingRtf: '{\\pard\\f0\\fs28\\b', // 14 point font
       closing: '/h2',
-      closingRtf: '\\par}'
+      closingRtf: '\\b0\\par}'
    },
    {
       opening: 'h3',
-      openingRtf: '{\\pard\\f0\\fs24',
+      openingRtf: '{\\pard\\f0\\fs24\\b', // 12 point font
       closing: '/h3',
-      closingRtf: '\\par}'
+      closingRtf: '\\b0\\par}'
    },
    {
       opening: 'h4',
