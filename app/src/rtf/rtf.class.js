@@ -27,13 +27,12 @@ class Rtf {
   }
 
 // regex: starts with alpha char, followed by alpha or numeric, btwn angle brackets, may include "/"
-  swapHtmlStrangerTags(html, dafaultTag) {
+  swapHtmlStrangerTags(html, defaultTag) {
     return html.replace(/<(\/?[a-zA-Z_]+[a-zA-Z0-9_]*)( *[^>]*)?>/gi, (match, tagName, options) => {
-      let newTag = !tagName.includes('/') ? `<${ dafaultTag }${ options ? options : '' }>` : `</${ dafaultTag }>`;
+      let newTag = !tagName.includes('/') ? `<${ defaultTag }${ options ? options : '' }>` : `</${ defaultTag }>`;
       return AllowedHtmlTags.isKnowedTag(tagName) ? match : `${ newTag }`;
     });
   }
-
 
   buildRtf() {
     this.rtfHeaderContent += Style.getRtfColorTable();

@@ -37,13 +37,13 @@ module.exports = [
    },
    {
       opening: 'h1',
-      openingRtf: '{\\pard\\f0\\fs48',
+      openingRtf: '{\\pard\\f0\\fs36',
       closing: '/h1',
       closingRtf: '\\par}'
    },
    {
       opening: 'h2',
-      openingRtf: '{\\pard\\f0\\fs36',
+      openingRtf: '{\\pard\\f0\\fs28',
       closing: '/h2',
       closingRtf: '\\par}'
    },
@@ -55,19 +55,19 @@ module.exports = [
    },
    {
       opening: 'h4',
-      openingRtf: '{\\pard\\f0\\fs22',
+      openingRtf: '{\\pard',
       closing: '/h4',
       closingRtf: '\\par}'
    },
    {
       opening: 'h5',
-      openingRtf: '{\\pard\\f0\\fs18',
+      openingRtf: '{\\pard',
       closing: '/h5',
       closingRtf: '\\par}'
    },
    {
       opening: 'h6',
-      openingRtf: '{\\pard\\f0\\fs16',
+      openingRtf: '{\\pard',
       closing: '/h6',
       closingRtf: '\\par}'
    },
