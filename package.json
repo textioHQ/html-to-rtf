@@ -1,13 +1,16 @@
 {
-  "name": "html-to-rtf",
-  "version": "1.3.2",
-  "author": {
-    "name": "Ozires R.S.O.F",
-    "email": "oziresrds@yahoo.com.br"
-  },
+  "name": "@textio/html-to-rtf",
+  "version": "1.3.3",
   "description": "Convert html to rtf format in the server",
   "readmeFilename": "README.md",
-  "keywords": ["html", "rtf", "convert", "server", "node", "javascript"],
+  "keywords": [
+    "html",
+    "rtf",
+    "convert",
+    "server",
+    "node",
+    "javascript"
+  ],
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
@@ -25,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/oziresrds/html-to-rtf.git"
+    "url": "git://github.com/textioHQ/html-to-rtf.git"
   }
 }

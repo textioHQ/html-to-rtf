@@ -7,7 +7,7 @@ const juice 		      = require('juice');
 const fs 				      = require('fs');
 
 class Rtf {
-  constructor() { 
+  constructor() {
     this.rtfHeaderOpening = "{\\rtf1\\ansi\\deff0{\\fonttbl {\\f0\\fnil\\fcharset0 Calibri;}{\\f1\\fnil\\fcharset2 Symbol;}}";
     this.rtfHeaderContent = '';
     this.rtfClosing = "}";
@@ -26,9 +26,10 @@ class Rtf {
     return this.buildRtf();
   }
 
-  swapHtmlStrangerTags(html, dafaultTag) {
-    return html.replace(/<(\/?[a-z-]+)( *[^>]*)?>/gi, (match, tagName, options) => {
-      let newTag = !tagName.includes('/') ? `<${ dafaultTag }${ options ? options : '' }>` : `</${ dafaultTag }>`;
+// regex: starts with alpha char, followed by alpha or numeric, btwn angle brackets, may include "/"
+  swapHtmlStrangerTags(html, defaultTag) {
+    return html.replace(/<(\/?[a-zA-Z_]+[a-zA-Z0-9_]*)( *[^>]*)?>/gi, (match, tagName, options) => {
+      let newTag = !tagName.includes('/') ? `<${ defaultTag }${ options ? options : '' }>` : `</${ defaultTag }>`;
       return AllowedHtmlTags.isKnowedTag(tagName) ? match : `${ newTag }`;
     });
   }
@@ -78,7 +79,7 @@ class Rtf {
       if(tableChildren[tbodyIndex].children[i].type != 'text') {
         (tableChildren[tbodyIndex].children[i].children).forEach((child, index) => {
           if(child.type != 'text')
-            count++;          
+            count++;
         });
         break;
       }
@@ -108,7 +109,7 @@ class Rtf {
 
   addContentOfTagInRtfCode(contentOfTag) {
     contentOfTag = MyString.removeCharacterOfEscapeInAllString(contentOfTag, '\n\t');
-   
+
     if(contentOfTag != undefined && !MyString.hasOnlyWhiteSpace(contentOfTag))
       this.rtfContentReferences.push({ content: this.addSpaceAroundString(contentOfTag.trim()), tag: false });
   }
@@ -132,7 +133,7 @@ class Rtf {
 
   clearCacheContent() {
     this.rtfHeaderContent = '';
-    this.rtfContentReferences = [];    
+    this.rtfContentReferences = [];
   }
 
 }

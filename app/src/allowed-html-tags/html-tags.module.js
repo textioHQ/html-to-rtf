@@ -37,39 +37,39 @@ module.exports = [
    },
    {
       opening: 'h1',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard\\f0\\fs36',  // 18 point font
       closing: '/h1',
-      closingRtf: '\\sb70\\par}'
+      closingRtf: '\\par}'
    },
    {
       opening: 'h2',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard\\f0\\fs28\\b', // 14 point font
       closing: '/h2',
-      closingRtf: '\\sb70\\par}'
+      closingRtf: '\\b0\\par}'
    },
    {
       opening: 'h3',
-      openingRtf: '{\\pard',
+      openingRtf: '{\\pard\\f0\\fs24\\b', // 12 point font
       closing: '/h3',
-      closingRtf: '\\sb70\\par}'
+      closingRtf: '\\b0\\par}'
    },
    {
       opening: 'h4',
       openingRtf: '{\\pard',
       closing: '/h4',
-      closingRtf: '\\sb70\\par}'
+      closingRtf: '\\par}'
    },
    {
       opening: 'h5',
       openingRtf: '{\\pard',
       closing: '/h5',
-      closingRtf: '\\sb70\\par}'
+      closingRtf: '\\par}'
    },
    {
       opening: 'h6',
       openingRtf: '{\\pard',
       closing: '/h6',
-      closingRtf: '\\sb70\\par}'
+      closingRtf: '\\par}'
    },
    {
       opening: 'i',
